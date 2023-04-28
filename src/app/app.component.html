@@ -1,0 +1,49 @@
+<p class="Task">Task1</p>
+<div>
+  <span *ngFor="let num of numbers">{{ num + 3 }}<br></span>
+</div>
+
+<p class="Task">Task2</p>
+<div>
+  <span *ngFor="let num of numbers">{{ num*num }}<br></span>
+</div>
+
+<p class="Task">Task3</p>
+<ul>
+  <li *ngFor="let num of numbers">{{ num }}</li>
+</ul>
+<a href="#" (click)="reverseNumbers()">Змінити порядок</a>
+
+<p class="Task">Task4</p>
+<ul>
+  <li *ngFor="let num of numbers">{{ num }}</li>
+</ul>
+<a href="#" (click)="sortNumbers()">Сортувати</a>
+
+<p class="Task">Task5</p>
+<ul>
+  <li *ngFor="let lang of languages; let i = index">
+    {{ lang }}  <a href="#" (click)="changeLang(i)"> Add+</a>
+  </li>
+</ul>
+
+<p class="Task">Task6</p>
+<ul>
+  <li *ngFor="let user of users">{{ user }}</li>
+</ul>
+<button (click)="addUser()">Add User</button>
+
+<p class="Task">Task7</p>
+<table>
+  <tr *ngFor="let row of tablenumbers">
+    <td *ngFor="let number of row">{{ number }}</td>
+  </tr>
+</table>
+
+<p class="Task">Task8</p>
+<ul>
+  <li *ngFor="let country of workers | keyvalue">
+    {{ country.key }}:
+    <span>{{ country.value }} </span>
+  </li>
+</ul>
